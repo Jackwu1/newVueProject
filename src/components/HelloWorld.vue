@@ -84,12 +84,19 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created() {
+    let url = `/api/index`;
+    axios.get(url).then((res) => {
+      console.log(res, 'axiosaxiosaxiosaxiosaxios')
+    })
   }
 }
 </script>
